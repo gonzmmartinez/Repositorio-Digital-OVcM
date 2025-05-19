@@ -1,0 +1,257 @@
+body {
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    max-width: 100%;
+    margin: auto;
+    background: #f8f8f8;
+    color: #333;
+}
+
+:root {
+    --grey-color: #8c8c8c;
+    --mid-light-grey-color: #c4c4c4;
+    --light-grey-color: #fafafa;
+    --accent-color: #51c33b;
+    --accent-color-dark: #398829;
+    --main-color: #3A1D51;
+    --main-color-light: #5a2d7d;
+    --secondary-color-light: #A682BA;
+}
+
+h1,
+h2 {
+    color: #2a2a2a;
+}
+
+a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-color-dark);
+    text-decoration: underline;
+}
+
+.lista-documentos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item {
+    display: flex;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.item img {
+    width: 150px;
+    height: 212px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 2px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 17.5px;
+}
+
+.info strong {
+    font-size: 20px;
+}
+
+.tipo {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.fecha {
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 5px;
+}
+
+.paginacion {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.paginacion a {
+    background: var(--main-color);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.paginacion a:hover {
+    background: var(--accent-color-dark);
+}
+
+#repositorio-container {
+    display: flex;
+    margin: auto;
+    width: 85%;
+    gap: 20px;
+}
+
+#repositorio {
+    width: 70%
+}
+
+#filtros {
+    width: 30%;
+    padding: 25px;
+    background: #f4f4f4;
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+}
+
+#filtros h2 {
+    margin-top: 0;
+}
+
+#filtros select {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+#filtros-activos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.filtro-tag {
+    background: var(--main-color);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.filtro-tag button {
+    background: none;
+    border: none;
+    color: white;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Header */
+.site-header {
+    background-color: #f8f8f8;
+    padding: 0;
+    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+}
+
+.header-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1% 2.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Exo', sans-serif;
+    font-weight: 600;
+}
+
+.logo img {
+    height: 40px;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.nav-links a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color-light)
+}
+
+.repository-header {
+    background-color: var(--main-color-light);
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0% 2.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Exo', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.miniLogo img {
+    height: 30px
+}
+
+.repository-header .nav-links a {
+    color: white;
+    font-size: 0.75rem;
+}
+
+.repository-header .nav-links a:hover {
+    color: var(--accent-color)
+}
+
+.repository-header p {
+    text-transform: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #f1f1f1;
+    padding: 1rem 0;
+    border-top: 1px solid #ccc;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-right a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: #333;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
