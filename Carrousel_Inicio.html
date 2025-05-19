@@ -1,0 +1,141 @@
+
+<!-- ESTO DEBE PEGARSE EN EL BLOQUE DE HTML PERSONALIZADO EN EL INICIO DE LA PÁGINA -->
+<!-- MUESTRA LOS ÚLTIMOS 10 INFORMES PUBLICADOS EN LA PÁGINA WEB -->
+
+<!-- Swiper Carousel de Informes recientes -->
+<link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+<style>
+  .swiper-container {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    font-family: "Exo", sans-serif;
+  }
+
+  .swiper-slide {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .swiper-slide img {
+    width: 150px;
+    height: 212px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  .swiper-slide h4 {
+    font-size: 0.85rem;
+    color: #333;
+    margin: 0 0 0.3rem;
+  }
+
+  .swiper-slide .meta {
+    font-size: 0.75rem;
+    color: #666;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #6a1b9a;
+  }
+
+  .swiper-pagination {
+    bottom: 10px !important;
+  }
+
+  .swiper-pagination-bullet {
+    background: #6a1b9a;
+    opacity: 0.5;
+  }
+
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .swiper-slide h4 {
+      font-size: 0.8rem;
+    }
+
+    .swiper-slide .meta {
+      font-size: 0.7rem;
+    }
+  }
+</style>
+
+<div class="swiper-container">
+  <div class="swiper-wrapper" id="carousel-slides">
+    <!-- Slides dinámicos -->
+  </div>
+
+  <!-- Flechas -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+
+  <!-- Paginación -->
+  <div class="swiper-pagination"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+  function formatearFecha(fechaStr) {
+    const fecha = new Date(fechaStr);
+    const opciones = { year: 'numeric', month: 'long' };
+    return fecha.toLocaleDateString('es-AR', opciones).replace(/^./, str => str.toUpperCase());
+  }
+
+  fetch("https://ovcmsalta.gob.ar/repositorio-digital/documentos-repositorio.json")
+    .then((res) => res.json())
+    .then((data) => {
+      data.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+      const recientes = data.slice(0, 10);
+      const container = document.getElementById("carousel-slides");
+
+      recientes.forEach((doc) => {
+        const slide = document.createElement("div");
+        slide.classList.add("swiper-slide");
+        slide.innerHTML = `
+          <a href="https://ovcmsalta.gob.ar/repositorio-digital/?doc=${doc.slug}" target="_blank" style="text-decoration: none;">
+            <img src="${doc.portada}" alt="${doc.titulo}" />
+            <h4>${doc.titulo}</h4>
+            <div class="meta">${formatearFecha(doc.fecha)}</div>
+            <div class="meta">${doc.tipo_documento}</div>
+          </a>
+        `;
+        container.appendChild(slide);
+      });
+
+      new Swiper(".swiper-container", {
+        slidesPerView: 5,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          0: { slidesPerView: 1 },
+          480: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 4 },
+          1280: { slidesPerView: 5 }
+        }
+      });
+    });
+</script>

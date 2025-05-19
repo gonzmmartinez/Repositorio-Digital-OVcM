@@ -4,7 +4,7 @@
     "titulo": "'A dos años de la Declaración de Emergencia en Violencia de Género'. Informe y recomendaciones",
     "fecha": "2016-08-30",
     "tipo_documento": "Informe temático",
-    "tema": "Emergencia en violencia de género",
+    "tema": "Ley de emergencia por violencia de género",
     "coleccion": "Análisis de la Declaración de Emergencia en Violencia de Género",
     "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/10/2.-Evaluacion-sobre-la-Ley-7857-%E2%80%93-Declaracion-de-emergencia-social-por-violencia-de-genero.pdf",
     "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2016/08/Informe2aniosLeyEmergencia_2016.png"
@@ -18,5 +18,135 @@
     "coleccion": "",
     "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/10/1.-Aborto-no-punible.pdf",
     "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/11/AbortoNoPunible.png"
+  },
+  {
+    "slug": "rutas-de-violencia-2019",
+    "titulo": "Rutas de violencias y estrategias de resistencia: Trayectorias de vidas travestis y trans en Salta Capital y Valles Calchaquíes",
+    "fecha": "2019-08-30",
+    "tipo_documento": "Informe temático",
+    "tema": "",
+    "coleccion": "",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/10/5-RUTAS-DE-VIOLENCIAS-Y-ESTRATEGIAS-DE-RESISTENCIA.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/10/RutasViolencia_2019.png"
+  },
+  {
+    "slug": "informe-instituciones-violencia-2019",
+    "titulo": "Mapa de instituciones que asisten la violencia",
+    "fecha": "2019-11-10",
+    "tipo_documento": "Informe temático",
+    "tema": "",
+    "coleccion": "",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/10/3-Informe-de-mapa-de-instituciones-que-asisten-la-violencia.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/10/MapaInstituciones_2019.png"
+  },
+  {
+    "slug": "informe-municipios-2020",
+    "titulo": "Relevamiento de los recursos y servicios disponibles para la atención integral de situaciones de violencia de género a nivel municipal 2020",
+    "fecha": "2020-08-30",
+    "tipo_documento": "Informe temático",
+    "tema": "Relevamiento de municipios",
+    "coleccion": "Relevamiento de las capacidades municipales",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/10/4-Relevamiento-de-las-areas-de-genero-municipales-2020.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/10/InformeMunicipios_2020.png"
+  },
+  {
+    "slug": "violencia-politica-elecciones-legislativas-2021",
+    "titulo": "Violencia política por motivos de género en la Provincia de Salta: un estudio realizado en el marco de las elecciones legislativas municipales",
+    "fecha": "2021-05-28",
+    "tipo_documento": "Informe temático",
+    "tema": "Violencia política",
+    "coleccion": "",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2024/05/Informe-VP.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2021/05/ViolenciaPolitica_2021.png"
+  },
+  {
+    "slug": "estudio-exploratorio-descriptivo-suicidio-2021",
+    "titulo": "'No son suicidas, son víctimas de femicidio'. Estudio exploratorio-descriptivo",
+    "fecha": "2021-09-26",
+    "tipo_documento": "Informe temático",
+    "tema": "Suicidio/femicidio",
+    "coleccion": "",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2024/09/3.23.2_No_son_suicidas_son_victimas_femicidas.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2021/09/InformeSuicidio_2021.png"
+  },
+  {
+    "slug": "informe-monitoreo-esi-educacion-2022",
+    "titulo": "Informe sobre resultados de monitoreo de la implementación de la ESI en el marco de la Resolución Provincial N° 1004. Estudio exploratorio con docentes/estudiantes e instituciones de 2do ciclo de Nivel Primario",
+    "fecha": "2022-10-30",
+    "tipo_documento": "Informe temático",
+    "tema": "Educación Sexual Integral",
+    "coleccion": "",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/10/7-Informe-sobre-Monitoreo-ESI-2022.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/10/Informe_ESI_2022.png"
+  },
+  {
+    "slug": "informe-municipios-2022",
+    "titulo": "Relevamiento de los recursos y servicios disponibles para la atención integral de situaciones de violencia de género a nivel municipal en la Provincia de Salta 2022",
+    "fecha": "2022-11-05",
+    "tipo_documento": "Informe temático",
+    "tema": "Relevamiento de municipios",
+    "coleccion": "Relevamiento de las capacidades municipales",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/10/6-Informes-Municipios-2022.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/10/InformeMunicipios_2022.png"
+  },
+  {
+    "slug": "experiencias-identidades-femeninas-wichi-2023",
+    "titulo": "Desde las propias enunciaciones: experiencias y sentidos de las identidades femeninas wichi",
+    "fecha": "2023-09-26",
+    "tipo_documento": "Informe temático",
+    "tema": "Comunidades indígenas",
+    "coleccion": "",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2024/09/experiencias-sentidos-identidades-femeninas-wichi.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2024/09/InformeExperienciasWichi.png"
+  },
+  {
+    "slug": "informe-10-anios-ley-emergencia-2024",
+    "titulo": "Informe - 10 años de la Declaración de 'Emergencia Pública en Materia Social por Violencai de Género en todo el territorio de la Provincia de Salta'",
+    "fecha": "2024-09-11",
+    "tipo_documento": "Informe temático",
+    "tema": "Ley de emergencia por violencia de género",
+    "coleccion": "",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2024/09/Informe-Emergencia-10-anos.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2024/09/Informe10anios_2024.png"
+  },
+  {
+    "slug": "informe-municipios-2024",
+    "titulo": "Monitoreo sobre las capacidades estatales con las que cuentan los municipios y sus áreas locales de género para el abordaje de las violencias por motivos de género",
+    "fecha": "2024-11-20",
+    "tipo_documento": "Informe temático",
+    "tema": "Relevamiento de municipios",
+    "coleccion": "Relevamiento de las capacidades municipales",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2024/11/INFORME-MUNICIPIOS-2024.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2024/11/InformeMunicipios_2024.png"
+  },
+  {
+    "slug": "dossier-estadistico-8m-2025",
+    "titulo": "Dossier estadístico conmemorativo al 8M 'Día Internacional de la Mujer Trabajadora' 2025",
+    "fecha": "2025-03-08",
+    "tipo_documento": "Informe temático",
+    "tema": "Mercado de trabajo",
+    "coleccion": "",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/03/Dossier_8M_OVcM_2025.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/03/8M_2025-724x1024.jpg"
+  },
+  {
+    "slug": "infografia-violencia-politica-2025",
+    "titulo": "Informe infográfico sobre Violencia Política por razones de género: estrategias para democratizar el ejercicio de la política",
+    "fecha": "2025-05-08",
+    "tipo_documento": "Informe temático",
+    "tema": "Violencia política",
+    "coleccion": "",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/Informe_Conversatorio_Violencia_Politica_OVcM.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/Violencia_Politica_2025-724x1024.jpg"
+  },
+  {
+    "slug": "resultados-encuesta-lgtbi-2025",
+    "titulo": "Resultados de la Encuesta 'Experiencias de discriminación y violencia en espacios educativos por identidad de género, expresión de género y orientación sexual en adolescencias y juventudes LGTBI+'",
+    "fecha": "2025-05-13",
+    "tipo_documento": "Informe temático",
+    "tema": "Géneros y diversidades",
+    "coleccion": "",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/Informe_Resultados_Encuesta_LGBT_2024.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/Portada_Encuesta_LGTBI_2024.jpg"
   }
 ]

@@ -8,7 +8,7 @@ const filtroColeccion = document.getElementById("filtro-coleccion");
 const filtroTema = document.getElementById("filtro-tema");
 
 const JSON_URL = "documentos-repositorio.json";
-const ITEMS_POR_PAGINA = 15;
+const ITEMS_POR_PAGINA = 10;
 
 let documentos = [];
 
@@ -56,14 +56,41 @@ function renderizar() {
       <div class="item">
         <img src="${d.portada}" alt="Portada de ${d.titulo}">
         <div class="info">
-          <a href="?doc=${d.slug}"><strong>${d.titulo}</strong></a><br>
-          <span class="tipo">${d.tipo_documento}</span><br>
           <span class="fecha">${formatearFecha(d.fecha)}</span>
+          <a href="?doc=${d.slug}"><strong>${d.titulo}</strong></a>
+          <div class="type-tags tags">
+            <span class="tag tag-tipo" data-tipo="${d.tipo_documento}">${d.tipo_documento}</span>
+          </div>
+          <div class="topic-tags tags">
+            ${d.tema ? `<span class="tag tag-tema" data-tema="${d.tema}">${d.tema}</span>` : ''}
+          </div>
+          <div class="collection-tags tags">
+            ${d.coleccion ? `<span class="tag tag-coleccion" data-coleccion="${d.coleccion}">${d.coleccion}</span>` : ''}
+          </div>
         </div>
       </div>
     `).join("") +
     `</div>` +
     generarControlesPaginacion(paginaActual, totalPaginas);
+
+  // Agregar eventos a las etiquetas clickeables
+  document.querySelectorAll('.tag-tipo').forEach(tag => {
+    tag.addEventListener('click', () => {
+      aplicarFiltro('type', tag.dataset.tipo);
+    });
+  });
+
+  document.querySelectorAll('.tag-coleccion').forEach(tag => {
+    tag.addEventListener('click', () => {
+      aplicarFiltro('coleccion', tag.dataset.coleccion);
+    });
+  });
+
+  document.querySelectorAll('.tag-tema').forEach(tag => {
+    tag.addEventListener('click', () => {
+      aplicarFiltro('tema', tag.dataset.tema);
+    });
+  });
 }
 
 function mostrarDetalle(slug) {

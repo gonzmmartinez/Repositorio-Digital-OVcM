@@ -3,7 +3,7 @@ body {
     font-size: 16px;
     max-width: 100%;
     margin: auto;
-    background: #f8f8f8;
+    background: white;
     color: #333;
 }
 
@@ -167,7 +167,7 @@ a:hover {
 .header-container {
     max-width: 100%;
     margin: 0 auto;
-    padding: 1% 2.5%;
+    padding: 1% 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -199,7 +199,7 @@ a:hover {
     background-color: var(--main-color-light);
     max-width: 100%;
     margin: 0 auto;
-    padding: 0% 2.5%;
+    padding: 0% 7.5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -254,4 +254,41 @@ a:hover {
 
 .footer-right a:hover {
     text-decoration: underline;
+}
+
+.tags {
+  margin: 0.25em 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  background-color: #ddd;
+  color: #333;
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  user-select: none;
+}
+
+.tag:hover {
+  background-color: #aaa;
+}
+
+.tag-tipo {
+  background-color: #0073e6;
+  color: white;
+}
+
+.tag-coleccion {
+  background-color: #d9534f;
+  color: white;
+}
+
+.tag-tema {
+  background-color: #5cb85c;
+  color: white;
 }
