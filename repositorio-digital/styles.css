@@ -295,6 +295,7 @@ a:hover {
 .detalle-contenedor {
     width: 100%;
     display: flex;
+    flex-wrap: nowrap;
     margin: auto;
 }
 
@@ -305,7 +306,7 @@ a:hover {
 
 detalle-info table {
         border-collapse: collapse;
-        width: 100%;
+        width: 10%;
     }
 
     .detalle-info th,
