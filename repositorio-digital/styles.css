@@ -20,7 +20,9 @@ body {
 
 h1,
 h2 {
-    color: #2a2a2a;
+    font-family: 'Exo', sans-serif;
+    text-transform: uppercase;
+    color: #333;
 }
 
 a {
@@ -60,7 +62,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    gap: 2px;
+    gap: 10px;
     font-family: 'Barlow', sans-serif;
     font-size: 17.5px;
 }
@@ -69,13 +71,8 @@ a:hover {
     font-size: 20px;
 }
 
-.tipo {
-    font-size: 0.9em;
-    color: #555;
-}
-
 .fecha {
-    font-size: 0.85em;
+    font-size: 0.75rem;
     color: #777;
     margin-top: 5px;
 }
@@ -103,17 +100,19 @@ a:hover {
 #repositorio-container {
     display: flex;
     margin: auto;
+    justify-content: center;
     width: 85%;
     gap: 20px;
 }
 
 #repositorio {
-    width: 70%
+    width: 75%
 }
 
 #filtros {
-    width: 30%;
+    width: 25%;
     padding: 25px;
+    margin-top: 120px;
     background: #f4f4f4;
     font-family: 'Barlow', sans-serif;
     font-size: 14px;
@@ -256,18 +255,18 @@ a:hover {
     text-decoration: underline;
 }
 
-.tags {
-  margin: 0.25em 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+.tags-div {
+    font-size: 0.75rem;
+    color: #333;
+    gap: 10px;
+    margin: 5px
 }
 
 .tag {
   background-color: #ddd;
   color: #333;
   font-size: 0.75rem;
-  padding: 3px 8px;
+  padding: 5px 10px;
   border-radius: 999px;
   cursor: pointer;
   transition: background-color 0.2s ease;
@@ -279,16 +278,45 @@ a:hover {
 }
 
 .tag-tipo {
-  background-color: #0073e6;
+  background-color: #D81159;
   color: white;
 }
 
 .tag-coleccion {
-  background-color: #d9534f;
+  background-color: #0EAD69;
   color: white;
 }
 
 .tag-tema {
-  background-color: #5cb85c;
+  background-color: #4D80CF;
   color: white;
 }
+
+.detalle-contenedor {
+    width: 100%;
+    display: flex;
+    margin: auto;
+}
+
+.detalle-info {
+    padding: 1.5%;
+    background-color: var(--light-grey-color);
+}
+
+detalle-info table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .detalle-info th,
+    .detalle-info td {
+        padding: 2.5%;
+        text-align: left;
+        border-bottom: 1px solid #ccc; /* gris claro */
+    }
+
+    /* Opcional: sin borde en la última fila */
+    .detalle-info table tr:last-child th,
+    .detalle-info table tr:last-child td {
+        border-bottom: none;
+    }

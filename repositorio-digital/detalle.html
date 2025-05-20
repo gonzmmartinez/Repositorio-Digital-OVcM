@@ -1,0 +1,45 @@
+<!-- EL DETALLE DE CADA DOCUMENTO -->
+<div class="detalle-contenedor" style="display: flex; gap: 2rem; flex-wrap: wrap;">
+    <!-- Columna izquierda: portada -->
+    <div class="detalle-portada">
+        <img id="portada-doc" src="" alt="Portada" width="250" height="354" style="object-fit: cover; box-shadow: 0 0px 20px 0px rgba(0, 0, 0, 0.1)">
+    </div>
+
+    <!-- Columna derecha: tabla de información -->
+    <div class="detalle-info" style="flex: 1;">
+        <table style="width: 100%">
+            <tr>
+                <th style="text-align: left">Fecha</th>
+                <td id="fecha-doc"></td>
+            </tr>
+            <tr>
+                <th style="text-align: left">Título completo</th>
+                <td id="titulo-doc" ></td>
+            </tr>
+            <tr>
+                <th style="text-align: left">Tipo de documento</th>
+                <td id="tipo-doc"></td>
+            </tr>
+            <tr>
+                <th style="text-align: left">Tema</th>
+                <td id="tema-doc"></td>
+            </tr>
+            <tr>
+                <th style="text-align: left">Colección</th>
+                <td id="coleccion-doc"></td>
+            </tr>
+            <tr>
+                <th style="text-align: left">URL del archivo</th>
+                <td><a id="url-doc" href="#" target="_blank"></a></td>
+            </tr>
+            <tr>
+                <th style="text-align: left">Descargar</th>
+                <td>
+                    <a id="link-descarga" class="boton-descarga" href="#" target="_blank" download
+                        style="display: inline-block; padding: 8px 12px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 4px;">📄
+                        DESCARGAR</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

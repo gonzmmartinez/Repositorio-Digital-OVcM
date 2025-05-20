@@ -40,7 +40,16 @@ function renderizar() {
   if (year) docsFiltrados = docsFiltrados.filter(d => new Date(d.fecha).getFullYear() == year);
   if (tipo) docsFiltrados = docsFiltrados.filter(d => d.tipo_documento === tipo);
   if (coleccion) docsFiltrados = docsFiltrados.filter(d => d.coleccion === coleccion);
-  if (tema) docsFiltrados = docsFiltrados.filter(d => d.tema === tema);
+  if (tema) {
+    docsFiltrados = docsFiltrados.filter(d => {
+      if (!d.tema) return false;
+      if (Array.isArray(d.tema)) {
+        return d.tema.includes(tema);
+      } else {
+        return d.tema === tema;
+      }
+    });
+  }
 
   mostrarFiltros({ year, type: tipo, coleccion, tema });
   construirSelects(documentos);
@@ -51,22 +60,32 @@ function renderizar() {
   const fin = inicio + ITEMS_POR_PAGINA;
   const docsPagina = docsFiltrados.slice(inicio, fin);
 
-  contenedor.innerHTML = `<h1>Repositorio Digital</h1><div class="lista-documentos">` +
+  const tituloRepositorio = tipo ? `Repositorio Digital – ${tipo}s` : "Repositorio Digital";
+  const cantidadDocs = docsFiltrados.length;
+  const leyendaCantidad = `Se ${cantidadDocs === 1 ? "encontró" : "encontraron"} ${cantidadDocs} documento${cantidadDocs !== 1 ? "s" : ""}.`;
+
+  contenedor.innerHTML = `
+  <h1>${tituloRepositorio}</h1>
+  <p class="cantidad-documentos">${leyendaCantidad}</p>
+  <div class="lista-documentos">` +
     docsPagina.map(d => `
       <div class="item">
         <img src="${d.portada}" alt="Portada de ${d.titulo}">
         <div class="info">
           <span class="fecha">${formatearFecha(d.fecha)}</span>
           <a href="?doc=${d.slug}"><strong>${d.titulo}</strong></a>
-          <div class="type-tags tags">
+          <div class="tags-div">Tipo: 
             <span class="tag tag-tipo" data-tipo="${d.tipo_documento}">${d.tipo_documento}</span>
           </div>
-          <div class="topic-tags tags">
-            ${d.tema ? `<span class="tag tag-tema" data-tema="${d.tema}">${d.tema}</span>` : ''}
-          </div>
-          <div class="collection-tags tags">
-            ${d.coleccion ? `<span class="tag tag-coleccion" data-coleccion="${d.coleccion}">${d.coleccion}</span>` : ''}
-          </div>
+          ${d.tema ? `
+          <div class="tags-div">Tema: ${Array.isArray(d.tema)
+          ? d.tema.map(t => `<span class="tag tag-tema" data-tema="${t}">${t}</span>`).join(" ")
+          : `<span class="tag tag-tema" data-tema="${d.tema}">${d.tema}</span>`
+        }</div>` : ''}
+          ${d.coleccion ? `
+          <div class="tags-div">Colección: 
+            <span class="tag tag-coleccion" data-coleccion="${d.coleccion}">${d.coleccion}</span>
+          </div>` : ''}
         </div>
       </div>
     `).join("") +
@@ -93,21 +112,56 @@ function renderizar() {
   });
 }
 
-function mostrarDetalle(slug) {
+async function mostrarDetalle(slug) {
   const doc = documentos.find(d => d.slug === slug);
   if (!doc) {
     contenedor.innerHTML = `<p>Documento no encontrado.</p><a href="index.html">← Volver</a>`;
     return;
   }
-  contenedor.innerHTML = `
-    <h2>${doc.titulo}</h2>
-    <p><strong>Tipo de documento:</strong> ${doc.tipo_documento}</p>
-    <p><strong>Fecha:</strong> ${formatearFecha(doc.fecha)}</p>
-    ${doc.coleccion ? `<p><strong>Colección:</strong> ${doc.coleccion}</p>` : ""}
-    ${doc.tema ? `<p><strong>Tema:</strong> ${doc.tema}</p>` : ""}
-    <p><a href="${doc.archivo.trim()}" target="_blank" download>📄 Descargar PDF</a></p>
-    <p><a href="index.html">← Volver al repositorio</a></p>
-  `;
+
+  try {
+    const res = await fetch("detalle.html");
+    const html = await res.text();
+    contenedor.innerHTML = html;
+
+    // Portada
+    document.getElementById("portada-doc").src = doc.portada;
+    document.getElementById("portada-doc").alt = `Portada de ${doc.titulo}`;
+
+    // Campos básicos
+    document.getElementById("titulo-doc").textContent = doc.titulo;
+    document.getElementById("fecha-doc").textContent = formatearFecha(doc.fecha);
+    document.getElementById("link-descarga").href = doc.archivo.trim();
+
+    // Enlace del archivo
+    document.getElementById("url-doc").textContent = doc.archivo.trim();
+    document.getElementById("url-doc").href = doc.archivo.trim();
+
+    // Tipo de documento como etiqueta
+    if (doc.tipo_documento) {
+      document.getElementById("tipo-doc").innerHTML = `<span class="tag tag-tipo">${doc.tipo_documento}</span>`;
+    }
+
+    // Colección como etiqueta
+    if (doc.coleccion) {
+      document.getElementById("coleccion-doc").innerHTML = `<span class="tag tag-coleccion">${doc.coleccion}</span>`;
+    }
+
+    // Tema como etiquetas
+    if (doc.tema) {
+      const temas = Array.isArray(doc.tema)
+        ? doc.tema.map(t => `<span class="tag tag-tema">${t}</span>`).join(" ")
+        : `<span class="tag tag-tema">${doc.tema}</span>`;
+      document.getElementById("tema-doc").innerHTML = temas;
+    }
+
+  } catch (error) {
+    contenedor.innerHTML = `<p>Error al cargar el detalle del documento.</p>`;
+  }
+
+  // Oculta el sidebar de filtros si existe
+  const filtros = document.getElementById("filtros");
+  if (filtros) filtros.style.display = "none";
 }
 
 function formatearFecha(fechaISO) {
@@ -138,7 +192,11 @@ function construirSelects(data) {
   const years = [...new Set(data.map(d => new Date(d.fecha).getFullYear()))].sort((a, b) => b - a);
   const tipos = [...new Set(data.map(d => d.tipo_documento))].filter(Boolean).sort();
   const colecciones = [...new Set(data.map(d => d.coleccion))].filter(Boolean).sort();
-  const temas = [...new Set(data.map(d => d.tema))].filter(Boolean).sort();
+
+  // Aquí la clave: usamos flatMap para extraer todos los temas independientemente de si vienen como string o array
+  const temas = [...new Set(
+    data.flatMap(d => Array.isArray(d.tema) ? d.tema : (d.tema ? [d.tema] : []))
+  )].filter(Boolean).sort();
 
   filtroAnio.innerHTML = `<label>Año</label><select><option value="">Todos</option>` +
     years.map(y => `<option value="${y}">${y}</option>`).join("") + `</select>`;
@@ -166,6 +224,7 @@ function construirSelects(data) {
     select.addEventListener("change", () => aplicarFiltro(key, select.value));
   });
 }
+
 
 function aplicarFiltro(nombre, valor) {
   const params = new URLSearchParams(window.location.search);
