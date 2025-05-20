@@ -1,75 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Repositorio digital | OVcM</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
+  <body>
     <header class="site-header">
-        <div class="header-container">
-            <div class="logo">
-                <a href="https://ovcmsalta.gob.ar/">
-                    <img src="https://ovcmsalta.gob.ar/wp-content/uploads/2023/08/Logotipo-completo-color-1-1-e1746839769147.png" alt="Logo OVCM" />
-                </a>
-            </div>
-            <nav class="nav-links">
-                <a href="https://ovcmsalta.gob.ar/">Inicio</a>
-                <a href="https://ovcmsalta.gob.ar/quienes-somos/">Quiénes somos</a>
-                <a href="https://ovcmsalta.gob.ar/estadisticas/">Estadísticas</a>
-                <a href="https://ovcmsalta.gob.ar/contacto/">Contacto</a>
-            </nav>
+      <div class="header-container">
+        <div class="logo">
+          <a href="https://ovcmsalta.gob.ar/">
+            <img
+              src="https://ovcmsalta.gob.ar/wp-content/uploads/2023/08/Logotipo-completo-color-1-1-e1746839769147.png"
+              alt="Logo OVCM"
+            />
+          </a>
+        </div>
+        <nav class="nav-links">
+          <a href="https://ovcmsalta.gob.ar/">Inicio</a>
+          <a href="https://ovcmsalta.gob.ar/quienes-somos/">Quiénes somos</a>
+          <a href="https://ovcmsalta.gob.ar/estadisticas/">Estadísticas</a>
+          <a href="https://ovcmsalta.gob.ar/contacto/">Contacto</a>
+        </nav>
+      </div>
+
+      <div class="repository-header">
+        <div class="miniLogo">
+          <a href="https://ovcmsalta.gob.ar/">
+            <img
+              src="https://ovcmsalta.gob.ar/wp-content/uploads/2023/09/Isologo-blanco--e1732716397908.png"
+              alt="Logo OVCM"
+            />
+          </a>
         </div>
 
-        <div class="repository-header">
-            <div class="miniLogo">
-                <a href="https://ovcmsalta.gob.ar/">
-                    <img src="https://ovcmsalta.gob.ar/wp-content/uploads/2023/09/Isologo-blanco--e1732716397908.png" alt="Logo OVCM" />
-                </a>
-            </div>
+        <p>REPOSITORIO DIGITAL DEL OVcM</p>
 
-            <p>REPOSITORIO DIGITAL DEL OVcM</p>
-
-            <nav class="nav-links">
-                <a href="https://ovcmsalta.gob.ar/repositorio-digital/?type=Informe+temático">Informes temáticos</a>
-                <a href="https://ovcmsalta.gob.ar/repositorio-digital/?type=Informe+temático">Informes anuales</a>
-                <a href="https://ovcmsalta.gob.ar/repositorio-digital/?type=Informe+temático">Material didáctico</a>
-                <a href="https://ovcmsalta.gob.ar/repositorio-digital/?type=Informe+temático">Herramientas</a>
-                <a href="https://ovcmsalta.gob.ar/repositorio-digital/?type=Informe+temático">Folletería</a>
-            </nav>
-        </div>
+        <nav class="nav-links">
+          <a
+            href="https://ovcmsalta.gob.ar/repositorio-digital/?type=Informe+temático"
+            >Informes temáticos</a
+          >
+          <a
+            href="https://ovcmsalta.gob.ar/repositorio-digital/?type=Informe+temático"
+            >Informes anuales</a
+          >
+          <a
+            href="https://ovcmsalta.gob.ar/repositorio-digital/?type=Informe+temático"
+            >Material didáctico</a
+          >
+          <a
+            href="https://ovcmsalta.gob.ar/repositorio-digital/?type=Informe+temático"
+            >Herramientas</a
+          >
+          <a
+            href="https://ovcmsalta.gob.ar/repositorio-digital/?type=Informe+temático"
+            >Folletería</a
+          >
+        </nav>
+      </div>
     </header>
 
-    <div id="repositorio-container">
-        <aside id="filtros">
-            <h2>Filtros</h2>
-            <div id="filtros-activos"></div>
-            <div id="filtro-anio"></div>
-            <div id="filtro-tipo"></div>
-            <div id="filtro-tema"></div>
-            <div id="filtro-coleccion"></div>
-        </aside>
+    <div
+      style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 75px; margin-bottom: 50px;">
+      <p style="margin: 0; font-family: 'Exo', sans-serif; font-size: 0.9rem; font-weight: 600; color: #c4c4c4;">Publicaciones e investigaciones</p>
+      <h1 style="margin: 0; font-family: 'Exo', sans-serif; font-size: 2.25rem; text-transform: none; color: #3A1D51;">Repositorio digital</h1>
+    </div>
 
-        <main id="repositorio"></main>
+    <div id="repositorio-container">
+      <aside id="filtros">
+        <h2>Filtros</h2>
+        <div id="filtros-activos"></div>
+        <div id="filtro-anio"></div>
+        <div id="filtro-tipo"></div>
+        <div id="filtro-tema"></div>
+        <div id="filtro-coleccion"></div>
+      </aside>
+
+      <main id="repositorio"></main>
     </div>
 
     <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-left">
-                <p>&copy; 2025 Observatorio de Violencias contra las Mujeres - Salta</p>
-            </div>
-            <div class="footer-right">
-                <a href="https://ovcmsalta.gob.ar/politica-de-privacidad/">Política de privacidad</a>
-            </div>
+      <div class="footer-container">
+        <div class="footer-left">
+          <p>
+            &copy; 2025 Observatorio de Violencias contra las Mujeres - Salta
+          </p>
         </div>
+        <div class="footer-right">
+          <a href="https://ovcmsalta.gob.ar/politica-de-privacidad/"
+            >Política de privacidad</a
+          >
+        </div>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

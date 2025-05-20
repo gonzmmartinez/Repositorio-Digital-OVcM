@@ -60,7 +60,7 @@ function renderizar() {
   const fin = inicio + ITEMS_POR_PAGINA;
   const docsPagina = docsFiltrados.slice(inicio, fin);
 
-  const tituloRepositorio = tipo ? `Repositorio Digital – ${tipo}s` : "Repositorio Digital";
+  const tituloRepositorio = tipo ? `DOCUMENTOS – ${tipo}` : "DOCUMENTOS";
   const cantidadDocs = docsFiltrados.length;
   const leyendaCantidad = `Se ${cantidadDocs === 1 ? "encontró" : "encontraron"} ${cantidadDocs} documento${cantidadDocs !== 1 ? "s" : ""}.`;
 
@@ -128,6 +128,9 @@ async function mostrarDetalle(slug) {
     document.getElementById("portada-doc").src = doc.portada;
     document.getElementById("portada-doc").alt = `Portada de ${doc.titulo}`;
 
+    // Titulo principal
+    document.getElementById("main-titulo-doc").textContent = doc.titulo;
+
     // Campos básicos
     document.getElementById("titulo-doc").textContent = doc.titulo;
     document.getElementById("fecha-doc").textContent = formatearFecha(doc.fecha);
@@ -136,6 +139,11 @@ async function mostrarDetalle(slug) {
     // Enlace del archivo
     document.getElementById("url-doc").textContent = doc.archivo.trim();
     document.getElementById("url-doc").href = doc.archivo.trim();
+
+    // Autores del documento
+    if (doc.autor && Array.isArray(doc.autor)) {
+      document.getElementById("autor-doc").textContent = doc.autor.join(", ");
+    }
 
     // Tipo de documento como etiqueta
     if (doc.tipo_documento) {

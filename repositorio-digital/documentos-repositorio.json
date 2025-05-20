@@ -2,6 +2,7 @@
   {
     "slug": "evaluacion-sobre-la-ley-7857",
     "titulo": "'A dos años de la Declaración de Emergencia en Violencia de Género'. Informe y recomendaciones",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
     "fecha": "2016-08-30",
     "tipo_documento": "Informe temático",
     "tema": "Ley de emergencia por violencia de género",
@@ -12,6 +13,7 @@
   {
     "slug": "aportes-aborto-no-punible",
     "titulo": "Aportes para el dictamen de proyectos de ley sobre aborto no punible",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
     "fecha": "2016-11-01",
     "tipo_documento": "Informe temático",
     "tema": ["Salud", "Libertad reproductiva"],
@@ -22,6 +24,7 @@
   {
     "slug": "rutas-de-violencia-2019",
     "titulo": "Rutas de violencias y estrategias de resistencia: Trayectorias de vidas travestis y trans en Salta Capital y Valles Calchaquíes",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
     "fecha": "2019-08-30",
     "tipo_documento": "Informe temático",
     "tema": "Géneros y diversidades",
@@ -32,6 +35,7 @@
   {
     "slug": "informe-instituciones-violencia-2019",
     "titulo": "Mapa de instituciones que asisten la violencia",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
     "fecha": "2019-11-10",
     "tipo_documento": "Informe temático",
     "tema": "Organismos y dispositivos",
@@ -42,6 +46,7 @@
   {
     "slug": "informe-municipios-2020",
     "titulo": "Relevamiento de los recursos y servicios disponibles para la atención integral de situaciones de violencia de género a nivel municipal 2020",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
     "fecha": "2020-08-30",
     "tipo_documento": "Informe temático",
     "tema": ["Relevamiento de municipios", "Organismos y dispositivos"],
@@ -52,6 +57,7 @@
   {
     "slug": "violencia-politica-elecciones-legislativas-2021",
     "titulo": "Violencia política por motivos de género en la Provincia de Salta: un estudio realizado en el marco de las elecciones legislativas municipales",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
     "fecha": "2021-05-28",
     "tipo_documento": "Informe temático",
     "tema": "Violencia política",
@@ -62,6 +68,7 @@
   {
     "slug": "estudio-exploratorio-descriptivo-suicidio-2021",
     "titulo": "'No son suicidas, son víctimas de femicidio'. Estudio exploratorio-descriptivo",
+    "autor": ["Observatorio de Violencia contra las Mujeres", "Iniciativa Spotlight"],
     "fecha": "2021-09-26",
     "tipo_documento": "Informe temático",
     "tema": "Suicidio/femicidio",
@@ -72,6 +79,7 @@
   {
     "slug": "informe-monitoreo-esi-educacion-2022",
     "titulo": "Informe sobre resultados de monitoreo de la implementación de la ESI en el marco de la Resolución Provincial N° 1004. Estudio exploratorio con docentes/estudiantes e instituciones de 2do ciclo de Nivel Primario",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
     "fecha": "2022-10-30",
     "tipo_documento": "Informe temático",
     "tema": "Educación Sexual Integral",
@@ -82,6 +90,7 @@
   {
     "slug": "informe-municipios-2022",
     "titulo": "Relevamiento de los recursos y servicios disponibles para la atención integral de situaciones de violencia de género a nivel municipal en la Provincia de Salta 2022",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
     "fecha": "2022-11-05",
     "tipo_documento": "Informe temático",
     "tema": ["Relevamiento de municipios", "Organismos y dispositivos"],
@@ -92,6 +101,7 @@
   {
     "slug": "experiencias-identidades-femeninas-wichi-2023",
     "titulo": "Desde las propias enunciaciones: experiencias y sentidos de las identidades femeninas wichi",
+    "autor": ["Observatorio de Violencia contra las Mujeres", "Iniciativa Spotlight"],
     "fecha": "2023-09-26",
     "tipo_documento": "Informe temático",
     "tema": "Comunidades indígenas",
@@ -101,7 +111,8 @@
   },
   {
     "slug": "informe-10-anios-ley-emergencia-2024",
-    "titulo": "Informe - 10 años de la Declaración de 'Emergencia Pública en Materia Social por Violencai de Género en todo el territorio de la Provincia de Salta'",
+    "titulo": "Informe - 10 años de la Declaración de 'Emergencia Pública en Materia Social por Violencia de Género en todo el territorio de la Provincia de Salta'",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
     "fecha": "2024-09-11",
     "tipo_documento": "Informe temático",
     "tema": "Ley de emergencia por violencia de género",
@@ -112,6 +123,7 @@
   {
     "slug": "informe-municipios-2024",
     "titulo": "Monitoreo sobre las capacidades estatales con las que cuentan los municipios y sus áreas locales de género para el abordaje de las violencias por motivos de género",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
     "fecha": "2024-11-20",
     "tipo_documento": "Informe temático",
     "tema": ["Relevamiento de municipios", "Organismos y dispositivos"],
@@ -122,6 +134,7 @@
   {
     "slug": "dossier-estadistico-8m-2025",
     "titulo": "Dossier estadístico conmemorativo al 8M 'Día Internacional de la Mujer Trabajadora' 2025",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
     "fecha": "2025-03-08",
     "tipo_documento": "Informe temático",
     "tema": "Mercado de trabajo",
@@ -132,6 +145,7 @@
   {
     "slug": "infografia-violencia-politica-2025",
     "titulo": "Informe infográfico sobre Violencia Política por razones de género: estrategias para democratizar el ejercicio de la política",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
     "fecha": "2025-05-08",
     "tipo_documento": "Informe temático",
     "tema": "Violencia política",
@@ -142,11 +156,199 @@
   {
     "slug": "resultados-encuesta-lgtbi-2025",
     "titulo": "Resultados de la Encuesta 'Experiencias de discriminación y violencia en espacios educativos por identidad de género, expresión de género y orientación sexual en adolescencias y juventudes LGTBI+'",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
     "fecha": "2025-05-13",
     "tipo_documento": "Informe temático",
     "tema": "Géneros y diversidades",
     "coleccion": "",
     "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/Informe_Resultados_Encuesta_LGBT_2024.pdf",
     "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/Portada_Encuesta_LGTBI_2024.jpg"
+  },
+  {
+    "slug": "anuario-estadistico-2018",
+    "titulo": "Anuario Estadístico de Violencia de Género - Provincia de Salta 2018",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
+    "fecha": "2018-10-20",
+    "tipo_documento": "Anuario estadístico",
+    "tema": "Estadísticas",
+    "coleccion": "Anuarios estadísticos de violencia de género",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/10/Anuario-Estadistico-de-Violencia-de-Genero-%E2%80%93-Provincia-de-Salta-2018.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/AnuarioEstadistico2018.jpg"
+  },
+  {
+    "slug": "anuario-estadistico-2019",
+    "titulo": "Anuario Estadístico de Violencia de Género - Provincia de Salta 2019",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
+    "fecha": "2019-10-20",
+    "tipo_documento": "Anuario estadístico",
+    "tema": "Estadísticas",
+    "coleccion": "Anuarios estadísticos de violencia de género",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/10/Anuario-Estadistico-de-Violencia-de-Genero-%E2%80%93-Provincia-de-Salta-2019.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/AnuarioEstadistico2019.jpg"
+  },
+  {
+    "slug": "anuario-estadistico-2020",
+    "titulo": "Anuario Estadístico de Violencia de Género - Provincia de Salta 2020",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
+    "fecha": "2020-10-20",
+    "tipo_documento": "Anuario estadístico",
+    "tema": "Estadísticas",
+    "coleccion": "Anuarios estadísticos de violencia de género",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/10/Anuario-Estadistico-de-Violencia-de-Genero-%E2%80%93-Provincia-de-Salta-2020.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/AnuarioEstadistico2020.jpg"
+  },
+  {
+    "slug": "anuario-estadistico-2021",
+    "titulo": "Anuario Estadístico de Violencia de Género - Provincia de Salta 2021",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
+    "fecha": "2021-10-20",
+    "tipo_documento": "Anuario estadístico",
+    "tema": "Estadísticas",
+    "coleccion": "Anuarios estadísticos de violencia de género",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/10/Anuario-Estadistico-de-Violencia-de-Genero-%E2%80%93-Provincia-de-Salta-2021.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/AnuarioEstadistico2021.jpg"
+  },
+  {
+    "slug": "informe-anual-2021-resumen-ejecutivo",
+    "titulo": "Informe anual 2021 (resumen ejecutivo)",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
+    "fecha": "2021-11-25",
+    "tipo_documento": ["Informe anual", "Resumen ejecutivo"],
+    "tema": "Gestión del OVcM",
+    "coleccion": "Resumenes ejecutivos de los informes anuales",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/10/INFORME-2021-%E2%80%93-Resumen-Ejecutivo.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/InformeAnual2021ResumenEjecutivo.jpg"
+  },
+  {
+    "slug": "informe-anual-2022-resumen-ejecutivo",
+    "titulo": "Informe anual 2022 (resumen ejecutivo)",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
+    "fecha": "2022-11-25",
+    "tipo_documento": ["Informe anual", "Resumen ejecutivo"],
+    "tema": "Gestión del OVcM",
+    "coleccion": "Resumenes ejecutivos de los informes anuales",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/10/INFORME-2022-%E2%80%93-Resumen-Ejecutivo.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/InformeAnual2022ResumenEjecutivo.jpg"
+  },
+  {
+    "slug": "informe-anual-2023-resumen-ejecutivo",
+    "titulo": "Informe anual 2023 (resumen ejecutivo)",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
+    "fecha": "2023-11-25",
+    "tipo_documento": ["Informe anual", "Resumen ejecutivo"],
+    "tema": "Gestión del OVcM",
+    "coleccion": "Resumenes ejecutivos de los informes anuales",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/11/RESUMEN-EJECUTIVO.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/InformeAnual2023ResumenEjecutivo.jpg"
+  },
+  {
+    "slug": "informe-anual-2024-resumen-ejecutivo",
+    "titulo": "Informe anual 2024 (resumen ejecutivo)",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
+    "fecha": "2024-11-25",
+    "tipo_documento": ["Informe anual", "Resumen ejecutivo"],
+    "tema": "Gestión del OVcM",
+    "coleccion": "Resumenes ejecutivos de los informes anuales",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2024/11/RESUMEN-EJECUTIVO-OVCM-2024.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/InformeAnual2024ResumenEjecutivo.jpg"
+  },
+  {
+    "slug": "informe-anual-2016",
+    "titulo": "Informe anual 2016",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
+    "fecha": "2016-11-25",
+    "tipo_documento": "Informe anual",
+    "tema": "Gestión del OVcM",
+    "coleccion": "Informes anuales del OVcM",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/10/informe-anual-2016.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/InformeAnual2016.jpg"
+  },
+  {
+    "slug": "informe-anual-2017",
+    "titulo": "Informe anual 2017",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
+    "fecha": "2017-11-25",
+    "tipo_documento": "Informe anual",
+    "tema": "Gestión del OVcM",
+    "coleccion": "Informes anuales del OVcM",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/10/informe-anual-2017.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/InformeAnual2017.jpg"
+  },
+  {
+    "slug": "informe-anual-2018",
+    "titulo": "Informe anual 2018",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
+    "fecha": "2018-11-25",
+    "tipo_documento": "Informe anual",
+    "tema": "Gestión del OVcM",
+    "coleccion": "Informes anuales del OVcM",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/10/informe-anual-2018.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/InformeAnual2018.jpg"
+  },
+  {
+    "slug": "informe-anual-2019",
+    "titulo": "Informe anual 2019",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
+    "fecha": "2019-11-25",
+    "tipo_documento": "Informe anual",
+    "tema": "Gestión del OVcM",
+    "coleccion": "Informes anuales del OVcM",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/10/informe-anual-2019.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/InformeAnual2019.jpg"
+  },
+  {
+    "slug": "informe-anual-2020",
+    "titulo": "Informe anual 2020",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
+    "fecha": "2020-11-25",
+    "tipo_documento": "Informe anual",
+    "tema": "Gestión del OVcM",
+    "coleccion": "Informes anuales del OVcM",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/10/informe-anual-2020.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/InformeAnual2020.jpg"
+  },
+  {
+    "slug": "informe-anual-2021",
+    "titulo": "Informe anual 2021",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
+    "fecha": "2021-11-25",
+    "tipo_documento": "Informe anual",
+    "tema": "Gestión del OVcM",
+    "coleccion": "Informes anuales del OVcM",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/10/informe-anual-2021.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/InformeAnual2021.jpg"
+  },
+  {
+    "slug": "informe-anual-2022",
+    "titulo": "Informe anual 2022",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
+    "fecha": "2022-11-25",
+    "tipo_documento": "Informe anual",
+    "tema": "Gestión del OVcM",
+    "coleccion": "Informes anuales del OVcM",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/10/informe-anual-2022.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/InformeAnual2022.jpg"
+  },
+  {
+    "slug": "informe-anual-2023",
+    "titulo": "Informe anual 2023",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
+    "fecha": "2023-11-25",
+    "tipo_documento": "Informe anual",
+    "tema": "Gestión del OVcM",
+    "coleccion": "Informes anuales del OVcM",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2023/11/Informe-final.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/InformeAnual2023.jpg"
+  },
+  {
+    "slug": "informe-anual-2024",
+    "titulo": "Informe anual 2024",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
+    "fecha": "2024-11-25",
+    "tipo_documento": "Informe anual",
+    "tema": "Gestión del OVcM",
+    "coleccion": "Informes anuales del OVcM",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2024/11/INFORME-ANUAL-OVCM-2024.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2024/11/InformeAnual_2024.png"
   }
 ]

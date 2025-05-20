@@ -3,11 +3,12 @@ body {
     font-size: 16px;
     max-width: 100%;
     margin: auto;
-    background: white;
+    background: var(--background-color);
     color: #333;
 }
 
 :root {
+    --background-color: #fbfbfb;
     --grey-color: #8c8c8c;
     --mid-light-grey-color: #c4c4c4;
     --light-grey-color: #fafafa;
@@ -301,7 +302,7 @@ a:hover {
 
 .detalle-info {
     padding: 1.5%;
-    background-color: var(--light-grey-color);
+    background-color: #e6e6e6;
 }
 
 detalle-info table {
@@ -321,3 +322,22 @@ detalle-info table {
     .detalle-info table tr:last-child td {
         border-bottom: none;
     }
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* espacio entre ícono y texto */
+    text-decoration: none;
+    background: none;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--accent-color-dark); /* cambia esto al color que prefieras */
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.back-icon {
+    width: 0.5rem;
+    height: 0.5rem;
+}
