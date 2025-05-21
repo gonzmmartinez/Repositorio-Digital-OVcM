@@ -38,7 +38,15 @@ function renderizar() {
   let docsFiltrados = documentos;
 
   if (year) docsFiltrados = docsFiltrados.filter(d => new Date(d.fecha).getFullYear() == year);
-  if (tipo) docsFiltrados = docsFiltrados.filter(d => d.tipo_documento === tipo);
+  if (tipo) {
+    docsFiltrados = docsFiltrados.filter(d => {
+      if (Array.isArray(d.tipo_documento)) {
+        return d.tipo_documento.includes(tipo);
+      } else {
+        return d.tipo_documento === tipo;
+      }
+    });
+  }
   if (coleccion) docsFiltrados = docsFiltrados.filter(d => d.coleccion === coleccion);
   if (tema) {
     docsFiltrados = docsFiltrados.filter(d => {
@@ -66,7 +74,8 @@ function renderizar() {
 
   contenedor.innerHTML = `
   <h1>${tituloRepositorio}</h1>
-  <p class="cantidad-documentos">${leyendaCantidad}</p>
+  <p class="cantidad-documentos" style="margin-bottom: 0">${leyendaCantidad}</p>
+  ${generarControlesPaginacion(paginaActual, totalPaginas)}
   <div class="lista-documentos">` +
     docsPagina.map(d => `
       <div class="item">
@@ -74,8 +83,9 @@ function renderizar() {
         <div class="info">
           <span class="fecha">${formatearFecha(d.fecha)}</span>
           <a href="?doc=${d.slug}"><strong>${d.titulo}</strong></a>
-          <div class="tags-div">Tipo: 
-            <span class="tag tag-tipo" data-tipo="${d.tipo_documento}">${d.tipo_documento}</span>
+          <div class="tags-div">Tipo: ${Array.isArray(d.tipo_documento)
+        ? d.tipo_documento.map(t => `<span class="tag tag-tipo" data-tipo="${t}">${t}</span>`).join(" ")
+        : `<span class="tag tag-tipo" data-tipo="${d.tipo_documento}">${d.tipo_documento}</span>`}
           </div>
           ${d.tema ? `
           <div class="tags-div">Tema: ${Array.isArray(d.tema)
@@ -147,7 +157,10 @@ async function mostrarDetalle(slug) {
 
     // Tipo de documento como etiqueta
     if (doc.tipo_documento) {
-      document.getElementById("tipo-doc").innerHTML = `<span class="tag tag-tipo">${doc.tipo_documento}</span>`;
+      const tipos = Array.isArray(doc.tipo_documento)
+        ? doc.tipo_documento.map(t => `<span class="tag tag-tipo">${t}</span>`).join(" ")
+        : `<span class="tag tag-tipo">${doc.tipo_documento}</span>`;
+      document.getElementById("tipo-doc").innerHTML = tipos;
     }
 
     // Colección como etiqueta
@@ -183,13 +196,27 @@ function generarControlesPaginacion(actual, total) {
   const params = new URLSearchParams(window.location.search);
   let html = `<div class="paginacion">`;
 
+  // Botón anterior con ícono y texto
   if (actual > 1) {
     params.set("pag", actual - 1);
-    html += `<a href="?${params}">← Anterior</a>`;
+    html += `
+      <a href="?${params}">
+        <img src="svg/flecha_izquierda.svg" alt="" style="vertical-align: middle; width: 16px; height: 16px; margin-right: 6px;">
+        Anterior
+      </a>`;
   }
+
+  // Texto con número de página
+  html += `<span><strong>Página ${actual} de ${total}</strong></span>`;
+
+  // Botón siguiente con texto e ícono
   if (actual < total) {
     params.set("pag", actual + 1);
-    html += `<a href="?${params}">Siguiente →</a>`;
+    html += `
+      <a href="?${params}">
+        Siguiente
+        <img src="svg/flecha_derecha.svg" alt="" style="vertical-align: middle; width: 16px; height: 16px; margin-left: 6px;">
+      </a>`;
   }
 
   html += `</div>`;
@@ -198,8 +225,11 @@ function generarControlesPaginacion(actual, total) {
 
 function construirSelects(data) {
   const years = [...new Set(data.map(d => new Date(d.fecha).getFullYear()))].sort((a, b) => b - a);
-  const tipos = [...new Set(data.map(d => d.tipo_documento))].filter(Boolean).sort();
   const colecciones = [...new Set(data.map(d => d.coleccion))].filter(Boolean).sort();
+
+  const tipos = [...new Set(
+    data.flatMap(d => Array.isArray(d.tipo_documento) ? d.tipo_documento : (d.tipo_documento ? [d.tipo_documento] : []))
+  )].filter(Boolean).sort();
 
   // Aquí la clave: usamos flatMap para extraer todos los temas independientemente de si vienen como string o array
   const temas = [...new Set(
@@ -273,5 +303,26 @@ function mostrarFiltros(filtros) {
     });
   });
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.querySelector('.header-container .nav-links');
+  const icon = menuToggle.querySelector('img');
+
+  menuToggle.addEventListener('click', function () {
+    navLinks.classList.toggle('open');
+
+    if (navLinks.classList.contains('open')) {
+      // Cambiar a ícono de cerrar
+      icon.src = 'svg/close_menu.svg';
+      // Opcional: efecto rotación suave
+      icon.style.transform = 'rotate(90deg)';
+    } else {
+      // Volver al ícono de menú
+      icon.src = 'svg/menu.svg';
+      icon.style.transform = 'rotate(0deg)';
+    }
+  });
+});
 
 cargarDocumentos();

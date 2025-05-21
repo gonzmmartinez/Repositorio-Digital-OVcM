@@ -1,8 +1,8 @@
 body {
     font-family: 'Barlow', sans-serif;
     font-size: 16px;
-    max-width: 100%;
-    margin: auto;
+    width: 100%;
+    margin: 0;
     background: var(--background-color);
     color: #333;
 }
@@ -81,8 +81,20 @@ a:hover {
 .paginacion {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     gap: 10px;
-    margin-top: 20px;
+    margin: 15px 0px;
+}
+
+.paginacion span {
+  font-weight: bold;
+}
+
+.paginacion img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
 }
 
 .paginacion a {
@@ -92,6 +104,7 @@ a:hover {
     border-radius: 4px;
     text-decoration: none;
     font-weight: bold;
+    vertical-align: middle;
 }
 
 .paginacion a:hover {
@@ -116,7 +129,7 @@ a:hover {
     margin-top: 120px;
     background: #f4f4f4;
     font-family: 'Barlow', sans-serif;
-    font-size: 14px;
+    font-size: 1rem;
 }
 
 #filtros h2 {
@@ -126,20 +139,40 @@ a:hover {
 #filtros select {
     width: 100%;
     margin-bottom: 15px;
-    padding: 5px;
+    padding: 10px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23999" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px 16px;
+    cursor: pointer;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#filtros select:focus {
+    outline: none;
+    border-color: var(--main-color-light, #A682BA);
+    box-shadow: 0 0 0 3px rgba(127, 17, 224, 0.1);
 }
 
 #filtros-activos {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 .filtro-tag {
     background: var(--main-color);
     color: white;
-    padding: 3px 8px;
+    padding: 5px 10px;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -151,7 +184,17 @@ a:hover {
     color: white;
     margin-left: 5px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 1rem;
+}
+
+#filtro-anio,
+#filtro-tipo,
+#filtro-tema,
+#filtro-coleccion {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    gap: 10px
 }
 
 /* Header */
@@ -228,32 +271,87 @@ a:hover {
     font-size: 1.125rem;
 }
 
-/* Footer */
+/* Footer moderno con tres secciones */
 .site-footer {
-    background-color: #f1f1f1;
-    padding: 1rem 0;
-    border-top: 1px solid #ccc;
+    background-color: var(--main-color);
+    color: white;
+    padding: 1.5rem 0;
     font-size: 0.9rem;
+    margin-top: 100px;
 }
 
 .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    gap: 20px;
 }
 
-.footer-right a {
-    margin-left: 1.5rem;
-    text-decoration: none;
-    color: #333;
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1 1 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.footer-right a:hover {
-    text-decoration: underline;
+/* Logo */
+.footer-left .logo img {
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+/* Texto */
+.footer-left p,
+.footer-center p {
+    font-family: 'Exo', sans-serif;
+    color: white;
+    margin: 0;
+}
+
+/* Íconos sociales */
+.footer-right {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-icon {
+    display: inline-flex;
+    width: 32px;
+    height: 32px;
+    background-color: #ffffff10;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.footer-icon:hover {
+    background-color: var(--accent-color-dark);
+    /* Modificá este valor a tu gusto */
+}
+
+.footer-icon img {
+    width: 18px;
+    height: 18px;
+}
+
+.logo-footer img {
+    height: 50px;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+    margin-bottom: 10px;
+}
+
+.logo-footer img:hover {
+    transform: scale(1.1);
 }
 
 .tags-div {
@@ -264,33 +362,33 @@ a:hover {
 }
 
 .tag {
-  background-color: #ddd;
-  color: #333;
-  font-size: 0.75rem;
-  padding: 5px 10px;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  user-select: none;
+    background-color: #ddd;
+    color: #333;
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    user-select: none;
 }
 
 .tag:hover {
-  background-color: #aaa;
+    background-color: #aaa;
 }
 
 .tag-tipo {
-  background-color: #D81159;
-  color: white;
+    background-color: #D81159;
+    color: white;
 }
 
 .tag-coleccion {
-  background-color: #0EAD69;
-  color: white;
+    background-color: #0EAD69;
+    color: white;
 }
 
 .tag-tema {
-  background-color: #4D80CF;
-  color: white;
+    background-color: #4D80CF;
+    color: white;
 }
 
 .detalle-contenedor {
@@ -306,32 +404,35 @@ a:hover {
 }
 
 detalle-info table {
-        border-collapse: collapse;
-        width: 10%;
-    }
+    border-collapse: collapse;
+    width: 10%;
+}
 
-    .detalle-info th,
-    .detalle-info td {
-        padding: 2.5%;
-        text-align: left;
-        border-bottom: 1px solid #ccc; /* gris claro */
-    }
+.detalle-info th,
+.detalle-info td {
+    padding: 2.5%;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    /* gris claro */
+}
 
-    /* Opcional: sin borde en la última fila */
-    .detalle-info table tr:last-child th,
-    .detalle-info table tr:last-child td {
-        border-bottom: none;
-    }
+/* Opcional: sin borde en la última fila */
+.detalle-info table tr:last-child th,
+.detalle-info table tr:last-child td {
+    border-bottom: none;
+}
 
 .back-button {
     display: inline-flex;
     align-items: center;
-    gap: 8px; /* espacio entre ícono y texto */
+    gap: 8px;
+    /* espacio entre ícono y texto */
     text-decoration: none;
     background: none;
     font-size: 1.125rem;
     font-weight: 500;
-    color: var(--accent-color-dark); /* cambia esto al color que prefieras */
+    color: var(--accent-color-dark);
+    /* cambia esto al color que prefieras */
     border: none;
     cursor: pointer;
     padding: 0;
@@ -340,4 +441,38 @@ detalle-info table {
 .back-icon {
     width: 0.5rem;
     height: 0.5rem;
+}
+
+#menu-toggle {
+    display: none
+}
+
+#link-descarga {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background-color: var(--main-color);
+    color: white;
+    font-family: 'Exo', sans-serif;
+    font-size: 1.25rem;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+#link-descarga:hover {
+    background-color: var(--accent-color-dark);
+}
+
+.icono-descarga {
+    width: 25px;
+    height: 25px;
+}
+
+.repositorio-muestra {
+    margin: auto;
+    width: 60%
 }

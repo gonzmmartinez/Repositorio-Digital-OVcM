@@ -350,5 +350,126 @@
     "coleccion": "Informes anuales del OVcM",
     "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2024/11/INFORME-ANUAL-OVCM-2024.pdf",
     "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2024/11/InformeAnual_2024.png"
+  },
+  {
+    "slug": "guia-practicas-equipos-diversidad-2021",
+    "titulo": "Guía de buenas prácticas para espacios y equipos de trabajo inclusivos en la diversidad",
+    "autor": ["Departamento de Géneros y Diversidad Sexual de la HCDN", "Instituto Nacional contra la Discriminación, la Xenofobia y el Racismo"],
+    "fecha": "2021-03-01",
+    "tipo_documento": ["Guía", "Herramientas"],
+    "tema": "Géneros y diversidades",
+    "coleccion": "",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2024/03/accion.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/GuiaPracticasDiversidad2021.jpg"
+  },
+  {
+    "slug": "herramienta-autoevaluacion-sensibilidad-2016",
+    "titulo": "Evaluar la sensibilidad de género de los parlamentos - Herramienta de autoevaluación",
+    "autor": ["Unión Interparlamentaria"],
+    "fecha": "2016-06-12",
+    "tipo_documento": "Herramientas",
+    "tema": ["Sensibilidad de género", "Parlamentos"],
+    "coleccion": "",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2024/03/Evaluar-la-sensibilidad-de-genero-2016.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/EvaluarSensibilidad2016.jpg"
+  },
+  {
+    "slug": "guia-lenguaje-igualitario-hcdn-2015",
+    "titulo": "Guía para el uso de un lenguaje no sexista e igualitario en la HCDN",
+    "autor": ["Honorable Cámara de Diputados de la Nación"],
+    "fecha": "2015-06-12",
+    "tipo_documento": ["Guía", "Herramientas"],
+    "tema": "Lenguaje igualitario",
+    "coleccion": "",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2024/03/guia-para-el-uso-de-un-lenguaje-no-sexista-e-igualitario-en-la-HCDN.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/GuiaLenguajeHCDN2015.jpg"
+  },
+  {
+    "slug": "guia-practica-enfoque-genero-legislativo-2011",
+    "titulo": "Guía práctica para la incorporación del enfoque de género en el trabajo legislativo",
+    "autor": ["Programa Naciones Unidas para el Desarrollo - PNUD", "Agencia Española de Cooperación Internacional al Desarrollo", "Consejo Nacional de las Mujeres", "ONU Mujeres - Entidad de las Naciones Unidas para la igualdad de género y el empoderamiento de la mujer"],
+    "fecha": "2011-06-17",
+    "tipo_documento": ["Guía", "Herramientas"],
+    "tema": ["Perspectiva de género", "Parlamentos"],
+    "coleccion": "",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2024/03/guia-practica-para-la-incorporacion-del-enfoque-de-genero-en-el-trabajo-legislativo.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/GuiaPracticaEnfoqueGeneroLegislativo2011.jpg"
+  },
+  {
+    "slug": "guia-lenguaje-perspectiva-genero-legislativo-2022",
+    "titulo": "Guía para el uso de lenguaje con perspectiva de género en ámbitos legislativos",
+    "autor": ["Honorable Cámara de Diputados de la Nación", "Facultad de Humanidades y Ciencias de la Educación - Universidad Nacional de La Plata"],
+    "fecha": "15-06-2022",
+    "tipo_documento": ["Guía", "Herramientas"],
+    "tema": ["Lenguaje igualitario", "Perspectiva de género"],
+    "coleccion": "",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2024/03/guia-para-el-uso-de-lenguaje-con-perspectiva-de-genero-en-ambitos-legislativos-1.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/GuiaLenguajeLegislativo2022.jpg"
+  },
+  {
+    "slug": "herramienta-diseno-proyectos-legislativos-genero-2021",
+    "titulo": "Herramienta para el diseño de los proyectos legislativos con perspectiva de género",
+    "autor": ["Honorable Cámara de Diputados de la Nación"],
+    "fecha": "2021-09-15",
+    "tipo_documento": "Herramientas",
+    "tema": ["Parlamentos", "Perspectiva de género"],
+    "coleccion": "",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2024/03/Herramienta-para-el-diseno-de-los-proyectos-legislativos-con-perspectiva-de-genero.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/HerramientaDisenoProyectosLegislativos2021.jpg"
+  },
+  {
+    "slug": "mujeres-poder-legislativo-2015",
+    "titulo": "Más allá de los números: Las mujeres transforman el poder legislativo en América Latina y el Caribe",
+    "autor": ["Programa de las Naciones Unidas para el Desarrollo", "Centro Regional para América Latina y el Caribe"],
+    "fecha": "2015-06-15",
+    "tipo_documento": "Herramientas",
+    "tema": "Parlamentos",
+    "coleccion": "",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2024/03/Programa-de-las-Naciones-Unidas-para-el-Desarrollo-Centro-Regional-para-America-Latina-y-el-Caribe.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/MujeresPoderLegislativo2015.jpg"
+  },
+  {
+    "slug": "guia-transversalizar-perspectiva-genero-legislativo-2024",
+    "titulo": "Guía para transversalizar la perspectiva de género en el ámbito legislativo",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
+    "fecha": "2024-07-30",
+    "tipo_documento": ["Guía"],
+    "tema": ["Perspectiva de género", "Parlamentos"],
+    "coleccion": "",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2024/07/Guia-Legislativa.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/GuiaPerspectivaGeneroLegislativo.jpg"
+  },
+  {
+    "slug": "economia-feminista-2012",
+    "titulo": "La economía feminista desde América Latina. Una hoja de ruta sobre los debates actuales en la región",
+    "autor": ["ONU Mujeres - Entidad de las Naciones Unidas para la igualdad de género y el empoderamiento de la mujer"],
+    "fecha": "2012-06-15",
+    "tipo_documento": "Herramientas",
+    "tema": ["Economía", "Presupuesto con perspectiva de género"],
+    "coleccion": "",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2024/09/La-economia-feminista-desde-America-Latina-es.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/EconomiaFeminista.jpg"
+  },
+  {
+    "slug": "herramientas-presupuesto-perspectiva-genero-2021",
+    "titulo": "Herramientas conceptuales y prácticas para presupuestos con perspectiva de género y diversidad",
+    "autor": ["Iniciativa Spotlight", "Ministerio de las Mujeres, Gëneros y Diversidad de la República Argentina", "ONU Mujeres - Entidad de las Naciones Unidas para la igualdad de género y el empoderamiento de la mujer"],
+    "fecha": "2021-06-15",
+    "tipo_documento": "Herramientas",
+    "tema": ["Presupuesto con perspectiva de género"],
+    "coleccion": "",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2024/09/HERRAMIENTAS-CONCEPTUALES-Y-PRACTICAS-PARA-PRESUPUESTOS-CON-PERSPECTIVA-DE-GENERO-Y-DIVERSIDAD-MINISTERIO-DE-MUJERES-G-Y-D-SPOTLIGHT.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/HerramientasPresupuestoGenero2021.jpg"
+  },
+  {
+    "slug": "aportes-formulario-presupuesto-perspectiva-genero-2024",
+    "titulo": "Aportes técnicos al formulario que incorpora la perspectiva de género al presupuesto",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
+    "fecha": "2024-09-26",
+    "tipo_documento": "Herramientas",
+    "tema": ["Presupuesto con perspectiva de género"],
+    "coleccion": "",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2024/09/presupuesto-con-perspectiva-de-genero.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/FormularioPerspectivaGenero2024.jpg"
   }
 ]
