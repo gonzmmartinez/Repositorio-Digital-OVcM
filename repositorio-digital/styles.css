@@ -205,6 +205,7 @@ a:hover {
     margin-bottom: 20px;
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 
 .header-container {
@@ -242,7 +243,7 @@ a:hover {
     background-color: var(--main-color-light);
     max-width: 100%;
     margin: 0 auto;
-    padding: 0% 7.5%;
+    padding: 0.75% 7.5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -258,13 +259,14 @@ a:hover {
 .repository-header .nav-links a {
     color: white;
     font-size: 0.75rem;
+    text-transform: uppercase;
 }
 
 .repository-header .nav-links a:hover {
     color: var(--accent-color)
 }
 
-.repository-header p {
+.repository-header a {
     text-transform: none;
     color: white;
     font-weight: 600;
@@ -472,7 +474,7 @@ detalle-info table {
     height: 25px;
 }
 
-.repositorio-muestra {
+.repositorio-muestra, .repositorio-muestra-2 {
     margin: auto;
     width: 60%
 }
