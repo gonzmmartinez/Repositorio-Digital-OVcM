@@ -140,6 +140,8 @@ async function mostrarDetalle(slug) {
 
     // Titulo principal
     document.getElementById("main-titulo-doc").textContent = doc.titulo;
+    // actualizar título de la pestaña
+    document.title = `${doc.titulo} | Repositorio digital | OVcM`;
 
     // Campos básicos
     document.getElementById("titulo-doc").textContent = doc.titulo;
@@ -313,14 +315,28 @@ document.addEventListener('DOMContentLoaded', function () {
     navLinks.classList.toggle('open');
 
     if (navLinks.classList.contains('open')) {
-      // Cambiar a ícono de cerrar
-      icon.src = 'svg/close_menu.svg';
-      // Opcional: efecto rotación suave
+      icon.src = './svg/close_menu.svg';
       icon.style.transform = 'rotate(90deg)';
     } else {
-      // Volver al ícono de menú
-      icon.src = 'svg/menu.svg';
+      icon.src = './svg/menu.svg';
       icon.style.transform = 'rotate(0deg)';
+    }
+  });
+
+  // Segundo header: menú toggle
+  const menuToggleRepo = document.getElementById('menu-toggle-repo');
+  const navLinksRepo = document.querySelector('.repository-header .nav-links');
+  const iconRepo = menuToggleRepo.querySelector('img');
+
+  menuToggleRepo.addEventListener('click', function () {
+    navLinksRepo.classList.toggle('open');
+
+    if (navLinksRepo.classList.contains('open')) {
+      iconRepo.src = './svg/close_menu_w.svg';
+      iconRepo.style.transform = 'rotate(90deg)';
+    } else {
+      iconRepo.src = './svg/menu_w.svg';
+      iconRepo.style.transform = 'rotate(0deg)';
     }
   });
 });

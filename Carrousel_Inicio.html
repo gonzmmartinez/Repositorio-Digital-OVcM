@@ -1,17 +1,19 @@
-
-<!-- ESTO DEBE PEGARSE EN EL BLOQUE DE HTML PERSONALIZADO EN EL INICIO DE LA PÁGINA -->
-<!-- MUESTRA LOS ÚLTIMOS 10 INFORMES PUBLICADOS EN LA PÁGINA WEB -->
-
 <!-- Swiper Carousel de Informes recientes -->
 <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
 <style>
-  .swiper-container {
+  .swiper {
     width: 100%;
-    height: 400px;
     position: relative;
     font-family: "Exo", sans-serif;
+    overflow: hidden;
+    padding: 0 40px 40px; /* espacio extra inferior para que no se superpongan los bullets */
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    align-items: stretch;
   }
 
   .swiper-slide {
@@ -19,13 +21,20 @@
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 10px;
-    height: 100%;
     box-sizing: border-box;
+    height: 100%;
+  }
+
+  .swiper-slide a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    color: inherit;
+    text-decoration: none;
   }
 
   .swiper-slide img {
@@ -33,39 +42,57 @@
     height: 212px;
     object-fit: cover;
     border-radius: 4px;
-    margin-bottom: 10px;
+    margin: 0 auto 10px;
+    flex-shrink: 0;
   }
 
   .swiper-slide h4 {
     font-size: 0.85rem;
     color: #333;
-    margin: 0 0 0.3rem;
+    margin-bottom: 6px;
   }
 
   .swiper-slide .meta {
     font-size: 0.75rem;
     color: #666;
+    margin-bottom: 4px;
   }
 
   .swiper-button-next,
   .swiper-button-prev {
     color: #6a1b9a;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+
+  .swiper-button-next {
+    right: 0;
   }
 
   .swiper-pagination {
-    bottom: 10px !important;
+    text-align: center;
+    margin-top: 20px;
   }
 
   .swiper-pagination-bullet {
-    background: #6a1b9a;
-    opacity: 0.5;
+    background: #3A1D51;
   }
 
   .swiper-pagination-bullet-active {
-    opacity: 1;
+    background: #51c33b;
   }
 
   @media (max-width: 768px) {
+    .swiper {
+      padding: 0 20px 40px;
+    }
+
     .swiper-slide h4 {
       font-size: 0.8rem;
     }
@@ -73,19 +100,27 @@
     .swiper-slide .meta {
       font-size: 0.7rem;
     }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
   }
 </style>
 
-<div class="swiper-container">
-  <div class="swiper-wrapper" id="carousel-slides">
-    <!-- Slides dinámicos -->
+<!-- Contenedor del carrusel + paginación -->
+<div style="width: 100%;">
+  <div class="swiper">
+    <div class="swiper-wrapper" id="carousel-slides">
+      <!-- Slides dinámicos -->
+    </div>
+
+    <!-- Flechas -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
   </div>
 
-  <!-- Flechas -->
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-
-  <!-- Paginación -->
+  <!-- Paginación debajo -->
   <div class="swiper-pagination"></div>
 </div>
 
@@ -97,18 +132,31 @@
     return fecha.toLocaleDateString('es-AR', opciones).replace(/^./, str => str.toUpperCase());
   }
 
+  function ajustarAlturaSlides() {
+    const slides = document.querySelectorAll(".swiper-slide");
+    let maxHeight = 0;
+    slides.forEach(slide => {
+      slide.style.height = "auto";
+      const h = slide.offsetHeight;
+      if (h > maxHeight) maxHeight = h;
+    });
+    slides.forEach(slide => {
+      slide.style.height = maxHeight + "px";
+    });
+  }
+
   fetch("https://ovcmsalta.gob.ar/repositorio-digital/documentos-repositorio.json")
-    .then((res) => res.json())
-    .then((data) => {
+    .then(res => res.json())
+    .then(data => {
       data.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
       const recientes = data.slice(0, 10);
       const container = document.getElementById("carousel-slides");
 
-      recientes.forEach((doc) => {
+      recientes.forEach(doc => {
         const slide = document.createElement("div");
         slide.classList.add("swiper-slide");
         slide.innerHTML = `
-          <a href="https://ovcmsalta.gob.ar/repositorio-digital/?doc=${doc.slug}" target="_blank" style="text-decoration: none;">
+          <a href="https://ovcmsalta.gob.ar/repositorio-digital/?doc=${doc.slug}" target="_blank">
             <img src="${doc.portada}" alt="${doc.titulo}" />
             <h4>${doc.titulo}</h4>
             <div class="meta">${formatearFecha(doc.fecha)}</div>
@@ -118,7 +166,7 @@
         container.appendChild(slide);
       });
 
-      new Swiper(".swiper-container", {
+      const swiper = new Swiper(".swiper", {
         slidesPerView: 5,
         spaceBetween: 20,
         navigation: {
@@ -135,7 +183,13 @@
           768: { slidesPerView: 3 },
           1024: { slidesPerView: 4 },
           1280: { slidesPerView: 5 }
+        },
+        on: {
+          imagesReady: ajustarAlturaSlides,
         }
       });
+
+      ajustarAlturaSlides();
+      window.addEventListener("resize", ajustarAlturaSlides);
     });
 </script>

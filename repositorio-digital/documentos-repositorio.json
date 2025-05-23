@@ -399,7 +399,7 @@
     "slug": "guia-lenguaje-perspectiva-genero-legislativo-2022",
     "titulo": "Guía para el uso de lenguaje con perspectiva de género en ámbitos legislativos",
     "autor": ["Honorable Cámara de Diputados de la Nación", "Facultad de Humanidades y Ciencias de la Educación - Universidad Nacional de La Plata"],
-    "fecha": "15-06-2022",
+    "fecha": "2022-06-15",
     "tipo_documento": ["Guía", "Herramientas"],
     "tema": ["Lenguaje igualitario", "Perspectiva de género"],
     "coleccion": "",
@@ -515,5 +515,16 @@
     "coleccion": "",
     "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2024/10/Guia-para-la-planificacion-anual-de-las-Areas-de-Mujeres-Genero-y-Diversidad-municipales.pdf",
     "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/GuiaPlanificacionAMGyDMunicipal.jpg"
+  },
+  {
+    "slug": "presupuesto-perspectiva-genero-2025",
+    "titulo": "Presupuesto con perspectiva de género",
+    "autor": ["Observatorio de Violencia contra las Mujeres"],
+    "fecha": "2025-05-23",
+    "tipo_documento": "Informe temático",
+    "tema": ["Monitoreo", "Economía", "Presupuesto con perspectiva de género"],
+    "coleccion": "",
+    "archivo": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/Presupuesto_con_perspectiva_de_genero_2025.pdf",
+    "portada": "https://ovcmsalta.gob.ar/wp-content/uploads/2025/05/Presupuesto_perspectiva_genero_2025-scaled.jpg"
   }
 ]

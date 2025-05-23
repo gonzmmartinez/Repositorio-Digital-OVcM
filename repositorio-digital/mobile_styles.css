@@ -53,13 +53,48 @@
         transition: transform 0.3s ease;
     }
 
+    /* Botón hamburguesa para el segundo header */
+    #menu-toggle-repo {
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: block;
+        padding: 8px;
+    }
+
+    #menu-toggle-repo img {
+        height: 24px;
+        width: 24px;
+        transition: transform 0.3s ease;
+    }
+
+    /* Menú oculto por defecto */
+    .repository-header .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .repository-header .nav-links.open {
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .repository-header .nav-links.open a {
+        font-size: 1rem;
+    }
+
+
     /* Navegación principal oculta por defecto */
     .header-container .nav-links {
         display: none;
         flex-direction: column;
         background-color: #fbfbfb;
         position: absolute;
-        top: 60px; /* ajustar según alto header */
+        top: 60px;
+        /* ajustar según alto header */
         left: 0;
         width: 100%;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -248,5 +283,29 @@
     .back-button {
         font-size: 1rem;
         gap: 5px;
+    }
+
+    /* Descripción de la sub-sección */
+    .muestra-descripcion {
+        flex-direction: column;
+        gap: 15px;
+        width: 90%;
+        margin: 30px auto;
+        margin-bottom: 60px;
+    }
+
+    .muestra-descripcion .icono {
+        width: 100px;
+        height: 100px;
+    }
+
+    .muestra-descripcion .icono img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .muestra-descripcion .texto {
+        font-size: 0.9rem;
+        text-align: center;
     }
 }

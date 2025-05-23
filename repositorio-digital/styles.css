@@ -447,7 +447,7 @@ detalle-info table {
     height: 0.5rem;
 }
 
-#menu-toggle {
+#menu-toggle, #menu-toggle-repo {
     display: none
 }
 

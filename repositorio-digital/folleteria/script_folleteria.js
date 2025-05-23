@@ -88,6 +88,7 @@ async function mostrarDetalleFolleto(slug, documentos) {
     document.getElementById("main-titulo-doc").textContent = doc.titulo;
     document.getElementById("titulo-doc").textContent = doc.titulo;
     document.getElementById("fecha-doc").textContent = formatearFecha(doc.fecha);
+    document.title = `${doc.titulo} | Folletería | Repositorio digital | OVcM`;
 
     // Descarga
     document.getElementById("link-descarga").href = doc.archivo.trim();
@@ -115,14 +116,17 @@ async function mostrarDetalleFolleto(slug, documentos) {
       const nextIndex = (currentIndex + 1) % doc.galeria.length;
 
       carrContainer.innerHTML = `
-      <div class="carousel-wrapper">
-        <img src="${doc.galeria[prevIndex]}" class="carousel-img small blurred" />
-        <img src="${doc.galeria[currentIndex]}" class="carousel-img active" />
-        <img src="${doc.galeria[nextIndex]}" class="carousel-img small blurred" />
-        <button class="carousel-btn prev"><img src="../svg/navigation_back.svg" alt="Anterior" /></button>
-        <button class="carousel-btn next"><img src="../svg/navigation_forward.svg" alt="Siguiente" /></button>
-      </div>
-    `;
+        <div class="carousel-wrapper">
+          ${doc.galeria.length > 1 ? `<img src="${doc.galeria[prevIndex]}" class="carousel-img small blurred" />` : ""}
+          <img src="${doc.galeria[currentIndex]}" class="carousel-img active" />
+          ${doc.galeria.length > 1 ? `<img src="${doc.galeria[nextIndex]}" class="carousel-img small blurred" />` : ""}
+          ${doc.galeria.length > 1 ? `
+            <button class="carousel-btn prev"><img src="../svg/navigation_back.svg" alt="Anterior" /></button>
+            <button class="carousel-btn next"><img src="../svg/navigation_forward.svg" alt="Siguiente" /></button>
+          ` : ""}
+        </div>
+      `;
+
 
       // Botones
       carrContainer.querySelector(".prev").addEventListener("click", () => {
