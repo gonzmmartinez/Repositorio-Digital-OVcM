@@ -87,14 +87,14 @@ a:hover {
 }
 
 .paginacion span {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .paginacion img {
-  display: inline-block;
-  vertical-align: middle;
-  width: 16px;
-  height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
 }
 
 .paginacion a {
@@ -199,13 +199,15 @@ a:hover {
 
 /* Header */
 .site-header {
-    background-color: #f8f8f8;
     padding: 0;
     box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     position: sticky;
     top: 0;
     z-index: 100;
+    background-color: rgba(248, 248, 248, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(25px);
 }
 
 .header-container {
@@ -279,7 +281,7 @@ a:hover {
     color: white;
     padding: 1.5rem 0;
     font-size: 0.9rem;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .footer-container {
@@ -474,7 +476,8 @@ detalle-info table {
     height: 25px;
 }
 
-.repositorio-muestra, .repositorio-muestra-2 {
+.repositorio-muestra,
+.repositorio-muestra-2 {
     margin: auto;
     width: 60%
 }

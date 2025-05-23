@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../styles.css" />
     <link rel="stylesheet" href="../mobile_styles.css" />
     <link rel="stylesheet" href="../styles_muestra.css" />
+    <link rel="stylesheet" href="./styles_folleteria.css" />
 </head>
 
 <body>
@@ -25,7 +26,7 @@
 
             <!-- Botón hamburguesa -->
             <button id="menu-toggle" aria-label="Abrir menú">
-                <img src="svg/menu.svg" alt="Ícono menú" />
+                <img src="../svg/menu.svg" alt="Ícono menú" />
             </button>
 
             <nav class="nav-links">
@@ -56,12 +57,32 @@
         </div>
     </header>
 
-    <!-- Mensaje de página en construcción -->
-    <main style="display: flex; justify-content: center; align-items: center; height: 50vh; flex-direction: column;">
-        <h1 style="font-family: 'Exo', sans-serif; color: #3A1D51; font-size: 2rem; text-align: center;">
-            Página en construcción
-        </h1>
-    </main>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 75px; margin-bottom: 50px;">
+        <h1
+            style="margin: 0; font-family: 'Exo', sans-serif; font-size: 2.25rem; text-transform: none; color: #3A1D51;">
+            Repositorio digital</h1>
+        <h2
+            style="margin: 0; font-family: 'Exo', sans-serif; font-size: 1.75rem; text-transform: none; color: #333333;">
+            Folletería</h2>
+    </div>
+
+    <div class="muestra-descripcion">
+        <div class="icono">
+            <img src="../svg/brochure_w.svg" alt="Ícono documento">
+        </div>
+        <div class="texto">
+            <p>
+                Esta sección reúne los informes anuales elaborados por el Observatorio de Violencia contra las Mujeres.
+                Los documentos presentan una sistematización y análisis de la información relevada durante el año en
+                relación a la situación de las manifestaciones de la violencia de género en la Provincia de Salta.
+                Asimismo, detallan las principales acciones desarrolladas por el organismo en el período
+                correspondiente, incluyendo tareas de monitoreo, instancias de articulación y asistencia técnica,
+                investigaciones realizadas y actividades de difusión.
+            </p>
+        </div>
+    </div>
+
+    <div class="galeria-folletos"></div>
 
     <footer class="site-footer">
         <div class="footer-container">
@@ -101,7 +122,7 @@
         </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="./script_folleteria.js"></script>
 </body>
 
 </html>
