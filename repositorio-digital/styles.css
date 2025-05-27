@@ -242,7 +242,9 @@ a:hover {
 }
 
 .repository-header {
-    background-color: var(--main-color-light);
+    background-image: url(./img/HeaderWebOVcM.png);
+    background-size: cover;        /* La imagen se escala para caber entera */
+    background-position: center;     /* Se centra en el div */
     max-width: 100%;
     margin: 0 auto;
     padding: 0.75% 7.5%;
@@ -277,7 +279,10 @@ a:hover {
 
 /* Footer moderno con tres secciones */
 .site-footer {
-    background-color: var(--main-color);
+    background-image: url(./img/FooterWebOVcM.png);
+    background-size: cover;        /* La imagen se escala para caber entera */
+    background-position: center;     /* Se centra en el div */
+    background-repeat: repeat;    /* No se repite */
     color: white;
     padding: 1.5rem 0;
     font-size: 0.9rem;
