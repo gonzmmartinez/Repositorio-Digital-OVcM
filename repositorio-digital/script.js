@@ -17,13 +17,26 @@ async function cargarDocumentos() {
     const res = await fetch(JSON_URL);
     documentos = await res.json();
     documentos.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
-    renderizar();
+
+    const searchInput = document.getElementById("search-input");
+
+    // Escuchar cambios en la barra de búsqueda
+    if (searchInput) {
+      searchInput.addEventListener("input", (e) => {
+        const query = e.target.value.trim().toLowerCase();
+        renderizar(query);
+      });
+    }
+
+    renderizar(); // render inicial sin búsqueda
+
   } catch (error) {
     contenedor.innerHTML = `<p>Error al cargar los documentos.</p>`;
+    console.error("Error al cargar los documentos:", error);
   }
 }
 
-function renderizar() {
+function renderizar(searchQuery = "") {
   const params = new URLSearchParams(window.location.search);
   const slug = params.get("doc");
   const pagParam = parseInt(params.get("pag")) || 1;
@@ -59,6 +72,24 @@ function renderizar() {
     });
   }
 
+  // 🔍 Filtro de búsqueda textual
+  if (searchQuery) {
+    const q = searchQuery.toLowerCase();
+    docsFiltrados = docsFiltrados.filter(d => {
+      const texto = [
+        d.slug,
+        d.titulo,
+        d.autor?.join(" "),
+        d.fecha,
+        Array.isArray(d.tipo_documento) ? d.tipo_documento.join(" ") : d.tipo_documento,
+        Array.isArray(d.tema) ? d.tema.join(" ") : d.tema,
+        d.coleccion,
+        d.archivo
+      ].join(" ").toLowerCase();
+      return texto.includes(q);
+    });
+  }
+
   mostrarFiltros({ year, type: tipo, coleccion, tema });
   construirSelects(documentos);
 
@@ -90,8 +121,7 @@ function renderizar() {
           ${d.tema ? `
           <div class="tags-div">Tema: ${Array.isArray(d.tema)
           ? d.tema.map(t => `<span class="tag tag-tema" data-tema="${t}">${t}</span>`).join(" ")
-          : `<span class="tag tag-tema" data-tema="${d.tema}">${d.tema}</span>`
-        }</div>` : ''}
+          : `<span class="tag tag-tema" data-tema="${d.tema}">${d.tema}</span>`}</div>` : ''}
           ${d.coleccion ? `
           <div class="tags-div">Colección: 
             <span class="tag tag-coleccion" data-coleccion="${d.coleccion}">${d.coleccion}</span>
@@ -102,23 +132,14 @@ function renderizar() {
     `</div>` +
     generarControlesPaginacion(paginaActual, totalPaginas);
 
-  // Agregar eventos a las etiquetas clickeables
   document.querySelectorAll('.tag-tipo').forEach(tag => {
-    tag.addEventListener('click', () => {
-      aplicarFiltro('type', tag.dataset.tipo);
-    });
+    tag.addEventListener('click', () => aplicarFiltro('type', tag.dataset.tipo));
   });
-
   document.querySelectorAll('.tag-coleccion').forEach(tag => {
-    tag.addEventListener('click', () => {
-      aplicarFiltro('coleccion', tag.dataset.coleccion);
-    });
+    tag.addEventListener('click', () => aplicarFiltro('coleccion', tag.dataset.coleccion));
   });
-
   document.querySelectorAll('.tag-tema').forEach(tag => {
-    tag.addEventListener('click', () => {
-      aplicarFiltro('tema', tag.dataset.tema);
-    });
+    tag.addEventListener('click', () => aplicarFiltro('tema', tag.dataset.tema));
   });
 }
 

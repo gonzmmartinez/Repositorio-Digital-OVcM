@@ -486,3 +486,25 @@ detalle-info table {
     margin: auto;
     width: 60%
 }
+
+/* BARRA DE BÚSQUEDA */
+
+#buscador {
+  margin-bottom: 1rem;
+}
+
+#buscador label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-family: 'Exo', sans-serif;
+  color: #3A1D51;
+}
+
+#search-input {
+  width: 100%;
+  padding: 8px;
+  font-family: 'Barlow', sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
